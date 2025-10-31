@@ -1,0 +1,3 @@
+Skip auth.E003 system check for USERNAME_FIELD with total UniqueConstraints.
+
+Defining a user model with a UniqueConstraint on the username field triggers auth.E003 requiring the field to be unique. Sometimes it’s not preferable to set unique=True as it creates an extra implicit index for CharField and TextField on PostgreSQL. The system check should be extended to check for the presence of USERNAME_FIELD in Model._meta.constraints. Not sure if this is a bug.

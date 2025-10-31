@@ -1,0 +1,1 @@
+Unexpected exception when multiplying geometry.Point and number. The expected behaviour is that both multiplication orders give the same result.

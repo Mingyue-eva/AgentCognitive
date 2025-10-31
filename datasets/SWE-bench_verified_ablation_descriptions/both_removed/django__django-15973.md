@@ -1,0 +1,3 @@
+Defining the "through" model in a many-to-many field in another app causes "AttributeError: 'str' object has no attribute '_meta'" on migration
+
+I tried migrating my apps into the database. The three relevant apps are called “fonte”, “fonte_variavel” and “variavel”. The fonte and variavel models have a many-to-many relationship using the fonte_variavel model as the through table. If I define FonteVariavelModel inside the fonte app’s models.py, migration works; if I keep it in its own app, migration fails. Putting all models in the same file also makes it work.

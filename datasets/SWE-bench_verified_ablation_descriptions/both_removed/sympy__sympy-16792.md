@@ -1,0 +1,3 @@
+autowrap with cython backend fails when array arguments do not appear in wrapped expr
+
+When using the cython backend for autowrap, it appears that the code is not correctly generated when the function in question has array arguments that do not appear in the final expression. A little inspection reveals that the generated C function signature treats array arguments as scalars rather than pointers. This error does not occur if the expression depends on each argument. This behavior is problematic when interfacing with external libraries that require a fixed function signature. I have identified the problem in codegen and will suggest a PR shortly.

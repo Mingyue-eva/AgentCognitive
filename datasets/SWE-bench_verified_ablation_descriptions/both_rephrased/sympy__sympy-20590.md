@@ -1,0 +1,4 @@
+Symbol instances have __dict__ since 1.7?  
+In version 1.6.2, creating a Symbol called “s” and then attempting to access its attribute dictionary fails because the object has no attribute storage. If you examine its defined slots at that point, you will find only a “name” slot. As a result, trying to read the __dict__ attribute raises an error stating that the symbol object has no such attribute.  
+In version 1.7, performing the same lookup on a Symbol called “s” returns an empty attribute dictionary instead of producing an error.  
+I may misinterpret this, but given the purpose of __slots__, I assume this is a bug, introduced because some parent class accidentally stopped defining __slots__.
