@@ -2,6 +2,13 @@
 
 This repository contains datasets, annotations, and analysis scripts from our empirical study on cognitive capabilities and behavioral patterns of large language model (LLM) agents in software issue resolution. Our study is based on the [SWE-bench](https://huggingface.co/datasets/SWE-bench/SWE-bench) benchmark and its verified subset, and investigates the cognitive alignment between human and LLM judgments, the reliability of LLM confidence, and the behavioral trajectories of [Openhands](https://github.com/All-Hands-AI/OpenHands) agents.
 
+
+<p align="center">Conceptual alignment between Cognitive Dimensions, Dataset, Research Questions (RQs), Observations, and Findings. </p>
+
+![Road Map](assets/Architecture_Diagram.jpg)
+Figure: Conceptual alignment between the **Cognitive Dimensions** and their corresponding **Roles in the Agent Workflow**. The upper layer represents the key cognitive dimensions investigated in this study, such as calibration, cues and heuristics, control, and monitoring, each describing a distinct aspect of meta-cognition in LLM agents. The lower layer maps these dimensions to their operational roles within the agent workflow (macro, input, process, feedback). The diagram also connects dataset annotation, research questions (RQ1–RQ4), empirical observations (O1–O7), and synthesized findings (F1–F4).
+
+
 ## 📘 Dataset Overview
 
 We use the following datasets in our experiments:
@@ -128,9 +135,3 @@ These outputs allow us to assess **meta-cognitive consistency**, revealing how t
 - **Output**: [LLM-as-Judge-with-traj Judgment Results](https://github.com/Empirical2025/Empirical2025/blob/main/judgements)
 
 
-
-
-<p align="center">Conceptual alignment between Cognitive Dimensions, Dataset, Research Questions (RQs), Observations, and Findings. </p>
-
-![Road Map](assets/Architecture_Diagram.jpg)
-Figure: Conceptual alignment between the **Cognitive Dimensions** and their corresponding **Roles in the Agent Workflow**. The upper layer represents the key cognitive dimensions investigated in this study, such as calibration, cues and heuristics, control, and monitoring, each describing a distinct aspect of meta-cognition in LLM agents. The lower layer maps these dimensions to their operational roles within the agent workflow (macro, input, process, feedback). The diagram also connects dataset annotation, research questions (RQ1–RQ4), empirical observations (O1–O7), and synthesized findings (F1–F4).
