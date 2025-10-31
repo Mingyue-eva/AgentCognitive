@@ -132,5 +132,5 @@ These outputs allow us to assess **meta-cognitive consistency**, revealing how t
 
 <p align="center">FConceptual alignment between Cognitive Dimensions, Dataset, Research Questions (RQs), Observations, and Findings. </p>
 
-![Road Map](Road_Map.png)
+![Road Map](assets/Architecture_Diagram.jpg)
 Figure: Conceptual alignment between the **Cognitive Dimensions** and their corresponding **Roles in the Agent Workflow**. The upper layer represents the key cognitive dimensions investigated in this study, such as calibration, cues and heuristics, control, and monitoring, each describing a distinct aspect of meta-cognition in LLM agents. The lower layer maps these dimensions to their operational roles within the agent workflow (macro, input, process, feedback). The diagram also connects dataset annotation, research questions (RQ1–RQ4), empirical observations (O1–O7), and synthesized findings (F1–F4).
