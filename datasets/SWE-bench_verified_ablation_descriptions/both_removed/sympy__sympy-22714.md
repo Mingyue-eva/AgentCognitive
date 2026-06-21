@@ -1,0 +1,1 @@
+In Sympy, calling sp.S on a Point2D expression within an evaluate(False) context raises an “Imaginary coordinates are not permitted.” error. The same expression parses correctly without evaluate(False) or when evaluate=False is passed directly to sp.S.

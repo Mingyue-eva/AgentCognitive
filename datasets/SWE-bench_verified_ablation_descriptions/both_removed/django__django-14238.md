@@ -1,0 +1,3 @@
+DEFAULT_AUTO_FIELD subclass check fails for subclasses of BigAutoField and SmallAutoField.
+
+When specifying a custom AutoField subclass as the DEFAULT_AUTO_FIELD, Django raises a ValueError claiming it must subclass AutoField because the subclass check excludes subclasses of BigAutoField and SmallAutoField. This can be fixed in AutoFieldMeta.__subclasscheck__ by allowing subclasses of those classes in the _subclasses property.

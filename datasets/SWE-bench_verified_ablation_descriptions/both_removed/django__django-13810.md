@@ -1,0 +1,5 @@
+MiddlewareNotUsed leaves undesired side effects when loading middleware in ASGI context
+
+I experienced issues when using ASGI, django-debug-toolbar, and my custom synchronous middleware. Commenting out DummyMiddleware prevents the problem. I noticed that when MiddlewareNotUsed is raised, Django skips further processing but still overwrites the handler variable with the result of adapt_method_mode(). On the next pass, this handler is passed to the following middleware without regard for async support checks, which “poisons” the middleware chain. The last middleware then returns an HttpResponse synchronously instead of a coroutine, as expected in an ASGI context.
+
+It seems that synchronous-only middleware may not work correctly under ASGI unless it explicitly supports async. If every middleware must be async-compatible when running as an ASGI app, the documentation should clearly state this requirement, since the async_capable = False flag suggests otherwise.

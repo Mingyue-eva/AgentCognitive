@@ -1,0 +1,1 @@
+TemplateView.get_context_data()'s kwargs returns SimpleLazyObjects that causes a crash when filtering. In Django 3.1, kwargs.get returns a SimpleLazyObject for offer_slug, and must be explicitly converted to a string for get_object_or_404 to work correctly. This differs from Django 3.0. Environment: Python 3.7.8 with SQLite.

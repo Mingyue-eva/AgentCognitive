@@ -1,0 +1,3 @@
+Confusing (broken?) colormap name handling
+
+It’s possible to register a colormap under one name while the colormap object has a different internal name. When using pyplot functions (e.g. imshow) after setting the default colormap to the registered name, matplotlib actually looks up the colormap object’s own name rather than the registered name. Manually fetching the colormap via cm.get_cmap('registered_name') works, but pyplot uses cmap.name internally. As a result, if you import a colormap from another module and register it under a different name, calls to pyplot will fail unless the colormap’s .name attribute matches the registered name. One must ensure the colormap name and the registered name are identical due to matplotlib’s dual internal lookup.

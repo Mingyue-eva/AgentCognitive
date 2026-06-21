@@ -1,0 +1,1 @@
+When you call deconstruct() on a Q object that wraps an Exists(…) expression, Django’s deconstruct logic treats each child as if it were a two‐element tuple and does something like child[0] and child[1]. In this case the only child is an Exists instance, not a tuple, so trying to index into it raises a TypeError complaining that an ‘Exists’ object is not subscriptable.

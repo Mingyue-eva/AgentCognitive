@@ -1,0 +1,2 @@
+Formsets’ add_fields() method fails in some circumstances if the argument index is None. When a FormSet has the attributes can_delete == True and can_delete_extra == False, calling add_fields() with index=None (for example via empty_form) raises a TypeError because index is compared to initial_form_count without checking for None. The fix is to add an index-not-None check before the comparison, for example by changing the condition to:  
+if self.can_delete and (self.can_delete_extra or (index is not None and index < initial_form_count))

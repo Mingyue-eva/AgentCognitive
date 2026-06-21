@@ -1,0 +1,2 @@
+#### Problem Description
+Running the example with `yCoord = ['a', 'c', 'b']` causes `combine_by_coords` to fail because the y‐coordinate labels are the same in each dataset but not arranged in sorted order. When it tries to merge them, it would produce a non-monotonic index along dimension y, so the function raises a ValueError.

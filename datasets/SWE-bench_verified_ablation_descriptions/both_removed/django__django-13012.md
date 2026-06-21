@@ -1,0 +1,3 @@
+Constant expressions of an ExpressionWrapper object are incorrectly placed at the GROUP BY clause
+
+I have a function that expects an arbitrary Query expression and constructs a query on a Postgres database. However, when the given expression is a constant expression, Django generates an SQL query that includes this constant in the GROUP BY clause, which is invalid in Postgres. Note that when the expression is not wrapped by ExpressionWrapper, Django correctly omits the constant from the GROUP BY clause.

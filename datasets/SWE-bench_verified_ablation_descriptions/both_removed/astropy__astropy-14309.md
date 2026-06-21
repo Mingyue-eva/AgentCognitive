@@ -1,0 +1,3 @@
+IndexError: tuple index out of range in identify_format (io.registry)
+
+Cron tests in HENDRICS using identify_format have started failing in devdeps. As per a Slack conversation with @saimn and @pllim, this should be related to https://github.com/astropy/astropy/commit/2a0c5c6f5b982a76615c544854cd6e7d35c67c7f. Citing @saimn: when a filepath is a string without a FITS extension, the function was returning None; now it executes isinstance(args[0], …) instead.

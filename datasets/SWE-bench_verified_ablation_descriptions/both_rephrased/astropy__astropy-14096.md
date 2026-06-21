@@ -1,0 +1,6 @@
+Subclassed SkyCoord gives misleading attribute access message  
+I'm trying to subclass SkyCoord, and add some custom properties. This all seems to be working fine, but when I have a custom property (`prop`) that tries to access a non-existent attribute (`random_attr`) below, the error message is misleading because it says `prop` doesn’t exist, where it should say `random_attr` doesn’t exist.
+
+To reproduce the issue, define a subclass of SkyCoord that includes a property called prop which returns the value of an attribute named random_attr. Instantiate this subclass with specific right-ascension and declination values in the ICRS frame, then attempt to read the prop property. Although the code is set up to fail because random_attr does not exist, the error message reports that the prop property itself is missing.
+
+At runtime, accessing the prop property raises an attribute error claiming that the custom property prop is not found on the instance, rather than reporting that the underlying random_attr is undefined.

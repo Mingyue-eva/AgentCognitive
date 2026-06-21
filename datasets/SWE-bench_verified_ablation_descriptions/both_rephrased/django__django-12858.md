@@ -1,0 +1,5 @@
+models.E015 is raised when ordering uses lookups that are not transforms.
+
+Description
+
+When I run the Django system check command against my project, the check fails with an error stating that the Stock model’s default ordering refers to a lookup named supply__product__parent__isnull, which the system claims does not exist. In practice, querying Stock and ordering by whether the related product’s parent is null works correctly: retrieving the first five records in ascending order by that criterion yields primary keys 1292, 1293, 1300, 1295, and 1294, and applying the reverse ordering yields 108, 109, 110, 23, and 107. This lookup-based ordering used to be accepted before the change introduced in issue #29408. The model relationships are defined so that Stock.supply points to Supply, Supply.product points to Product, and Product.parent is a nullable self-referential foreign key.

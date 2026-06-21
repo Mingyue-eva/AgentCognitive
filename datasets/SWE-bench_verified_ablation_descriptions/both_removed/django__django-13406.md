@@ -1,0 +1,3 @@
+Queryset with values()/values_list() crashes when recreated from a pickled query
+
+I am pickling queryset.query for later re-evaluation as per the Django documentation. However, when re-running a query that combines values() and annotate() for GROUP BY functionality, the result is broken. Instead of returning a list of dicts, the rerun returns model instances with a broken internal state, making it impossible to access fields like .id. It appears that Django retrieves the correct data but instantiates models rather than returning dictionaries, leading to failures due to the unexpected data structure.
