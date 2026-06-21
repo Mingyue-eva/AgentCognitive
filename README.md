@@ -14,7 +14,7 @@ This repository contains the datasets, annotations and analysis scripts associat
 ## 🎨 Research Findings at a Glance
 
 <p align="center">
-  <img src="assets/confidence_vs_competence_comic.jpeg"
+  <img src="assets/comic_intro.png"
        alt="Comic summary of the main findings on judgment and performance misalignment in agentic software repair"
        width="100%">
 </p>
