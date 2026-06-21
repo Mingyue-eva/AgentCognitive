@@ -3,6 +3,27 @@
 This repository contains the datasets, annotations and analysis scripts associated with our empirical study:
 
 > **Confidence vs. Competence: Misalignment in Judgment and Performance for Agentic Software Repair**
+> Mingyue Yuan, Jieshan Chen, Dehai Zhao, Gelareh Mohammadi, Yoshifumi Kitamura, Aaron John Quigley, Qinghua Lu and Zhenchang Xing
+
+<div align="center">
+
+[![Read the Paper](https://img.shields.io/badge/📄_Read_the_Paper-Confidence_vs._Competence-d73a49?style=for-the-badge)](assets/TOSEM_agent_yuan26_confidence_vs_competence.pdf)
+
+</div>
+
+## 🎨 Research Findings at a Glance
+
+<p align="center">
+  <img src="assets/confidence_vs_competence_comic.jpeg"
+       alt="Comic summary of the main findings on judgment and performance misalignment in agentic software repair"
+       width="100%">
+</p>
+
+<p align="center">
+  <em>
+    An illustrated summary of the study's main findings: humans and agents may judge the same issue report differently; removing critical diagnostic cues can reduce repair success without producing a comparable change in the agent's self-assessment; longer or more active trajectories do not necessarily indicate effective progress; and post-execution judgments may conflict across different dimensions. These findings motivate repair systems that jointly monitor available evidence, agent behavior, and self-judgment, and trigger human intervention when autonomous repair becomes unreliable.
+  </em>
+</p>
 
 Our study investigates two judgment-related gaps in agentic software repair:
 
